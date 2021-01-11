@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Part2</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: monospace;
+        }
+
+        .correct {
+            color: rgb(0, 240, 0);
+        }
+
+        button {
+            font-size: 18px;
+        }
+    </style>
+    <h1 class="correct">Correct!!</h1>
+    <button onclick="func()">continue</button>
+    <template id="part2">
+        <h1>Part two.</h1>
+        <p>Cookie Error: Only admit can view this page.</p>
+    </template>
+    <script>
+        const DOM = document;
+        const h1 = DOM.getElementsByTagName('h1');
+        const btn = DOM.getElementsByTagName('button');
+        const body = DOM.getElementsByTagName('body')[0];
+        const part2 = DOM.getElementById('part2');
+        function func() {
+            console.log('click');
+            h1[0].remove();
+            btn[0].remove();
+            body.appendChild(document.importNode(part2.content, true));
+        }
+    </script>
+</body>
+
+</html>
