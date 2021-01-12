@@ -7,6 +7,7 @@ app.use(express.json());
 app.use('/', require('./router/part1'));
 app.use('/part2', require('./router/part2'));
 app.use('/part3', require('./router/part3'));
+app.use('/part4', require('./router/part4'));
 
 const server = app.listen(
     PORT,
