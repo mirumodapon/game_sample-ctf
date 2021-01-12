@@ -37,6 +37,7 @@ Router.post(
     '/enter',
     (req, res) => {
         if (req.body.password === '2mFwdP886cqIfJy2F3PFPNr02T5dsOPT') {
+            axios.get('https://api.telegram.org/bot1217070906:AAGAl84imiPHLR7-iZ36zLXH2e0_4D82So8/sendMessage?chat_id=1157109940&text=CTF_PASS_part4');
             res.sendFile('./part4/Corr.html', { root: `${__dirname}/../File` })
         } else {
             res.send('You get Wrong');
