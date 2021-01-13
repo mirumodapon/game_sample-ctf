@@ -26,9 +26,9 @@ Router.get(
 )
 
 Router.get(
-    '/part4-image',
+    '/QRCode',
     async (req, res) => {
-        const file = await fs.readFile('./File/part4/output.jpg');
+        const file = await fs.readFile('./File/part4/QRCode.jpg');
         res.send(file);
     }
 )
